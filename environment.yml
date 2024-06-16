@@ -1,0 +1,12 @@
+name: RedeHist_env
+dependencies:
+  - python=3.9.18
+  - pip=21.2.4
+  - pip:
+    - numpy==1.20.3
+    - pandas==2.0.3
+    - scikit-misc==0.1.4
+    - scikit-learn==1.0.2
+    - scanpy==1.9.3
+    - cellpose==2.2.3
+    - pytorch_lightning==1.9.5
