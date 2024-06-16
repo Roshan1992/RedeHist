@@ -1,13 +1,13 @@
 # RedeHist
 Spatial Transcriptomics Prediction at Single-cell Resolution on Histology Images using RedeHist
 
-![workflow](https://user-images.githubusercontent.com/11591480/236590851-2abd1da4-8900-42a7-813e-35ec816c5129.png)
+![figure1](https://github.com/Roshan1992/RedeHist/assets/11591480/fe053163-b09b-42fe-83c7-2abddd4f4f8f)
 
 
 
 ## Overview
 
-RedeFISH is an automatic tool for cell alignment in imaging-based spatial transcriptomics (ST) and scRNA-seq data through deep reinforcement learning. This method aims to identify functional-defined cells in ST data that exhibit the highest degree of expression similarity with cells in scRNA-seq data. Through the incorporation of scRNA-seq data, this method additionally undertakes the task of inferring whole-transcriptome expression profiles for the aforementioned identified cells. RedeFISH is a python package written in Python 3.9 and pytorch 1.12. It allows GPU to accelerate computational efficiency.
+RedeHist is an automatic tool for spatial transcriptomics (ST) prediction at single-cell resolution on histology images. This approach employs a deep neural network integrated with nuclei segmentation results to predict transcriptomic profiles at single-cell resolution from histology images. RedeHist takes histology images, ST data, and scRNA-seq references as inputs, then generates outputs consisting of single cells identified on the images along with their whole transcriptomic expression profiles, spatial coordinates, and annotations. RedeHist is a python package written in Python 3.9 and pytorch 1.12. It allows GPU to accelerate computational efficiency.
 
 
 ## Installation
@@ -16,12 +16,12 @@ RedeFISH is an automatic tool for cell alignment in imaging-based spatial transc
 
 [2] Clone this repository:
 ```
-    git clone https://github.com/Roshan1992/RedeFISH.git
+    git clone https://github.com/Roshan1992/RedeHist.git
 ```
 
-[3] Change to RedeFISH directory:
+[3] Change to RedeHist directory:
 ```
-    cd RedeHIST
+    cd RedeHist
 ```
 
 [4] Create a conda environment with the required dependencies:
@@ -52,25 +52,29 @@ If GPU not available:
 
 ## Quick Start
 
-### Download example data
+### [1] Download example data:
+please run the following command to download example data for RedeHist:
 
 
-### Run RedeHist
+### [2] Run RedeHist
 
-RedeFISH requires 2 file as input:
+__[1] To implement RedeHist for Imaging-based ST:__ please run
 
-__[1] A csv file for single-cell ST data:__ This file must includes at least 3 columns, namely __x__, __y__ and corresponding __gene__.
+```
+    python -u example_train_ImagingBased.py
+    python -u example_predict_ImagingBased.py
+```
+for training and prediction respectively.
 
-![image](https://user-images.githubusercontent.com/11591480/236604144-21a769c2-398b-40e2-9dc7-084d7630241d.png)
+__[2]To implement RedeHist for Sequencing-based ST:__ please run
 
-__[2] An Anndata h5ad file for scRNA-seq data:__ This file must includes expression matrix and cell type annotation.
+```
+    python -u example_train_SequencingBased.py
+    python -u example_predict_SequencingBased.py
+```
+for training and prediction respectively.
 
-![image](https://user-images.githubusercontent.com/11591480/236605176-6551c703-e19b-42f0-9c43-4022e41b7eb4.png)
-
-### Output
-
-See <a href="https://github.com/Roshan1992/Redesics/blob/main/example.ipynb" target="_blank">example</a> for implementing Redesics on imaging-based single-cell ST platforms.
-
-See <a href="https://github.com/Roshan1992/Redesics/blob/main/example_for_Stereo_seq.ipynb" target="_blank">example_for_Stereo_seq</a> for implementing Redesics on Stereo-seq platforms.
+### [3] Output
+The output of RedeHist is a h5ad file that includes whole transcriptomic expression profiles, spatial coordinates, and cell annotations
 
 
