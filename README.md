@@ -34,7 +34,7 @@ RedeHist is an automatic tool for spatial transcriptomics (ST) prediction at sin
     conda activate RedeHist_env
 ```
 
-[6] Install RedeHIST:
+[6] Install RedeHist:
 ```
     pip install .
 ```
@@ -52,11 +52,13 @@ If GPU not available:
 
 ## Quick Start
 
-### [1] Download example data:
-please run the following command to download example data for RedeHist:
+### [1] Download example data
+Click <a href="https://drive.google.com/file/d/1Y93zWhKSbLqNg31i-pwlew7-nQNHOJIJ/view?usp=drive_link" target="_blank">here</a> to download example data for RedeHist. Then, place the downloaded file (example_data_for_RedeHist.zip) into the RedeHist directory and unzip it.
+```
+    unzip example_data_for_RedeHist.zip
+```
 
-
-### [2] Run RedeHist
+### [2] Run RedeHist for example datasets
 
 __[1] To implement RedeHist for Imaging-based ST:__ please run
 
@@ -75,6 +77,6 @@ __[2]To implement RedeHist for Sequencing-based ST:__ please run
 for training and prediction respectively.
 
 ### [3] Output
-The output of RedeHist is a h5ad file that includes whole transcriptomic expression profiles, spatial coordinates, and cell annotations
+The output of RedeHist is a h5ad file that includes predicted cells with their whole transcriptomic expression profiles, spatial coordinates, and cell annotations.
 
 
