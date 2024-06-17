@@ -1,5 +1,5 @@
 # RedeHist
-Spatial Transcriptomics Prediction at Single-cell Resolution on Histology Images using RedeHist
+Spatial Transcriptomics Prediction from Histology Images at Single-cell Resolution using RedeHist
 
 ![figure1](https://github.com/Roshan1992/RedeHist/assets/11591480/fe053163-b09b-42fe-83c7-2abddd4f4f8f)
 
@@ -7,7 +7,7 @@ Spatial Transcriptomics Prediction at Single-cell Resolution on Histology Images
 
 ## Overview
 
-RedeHist is an automatic tool for spatial transcriptomics (ST) prediction at single-cell resolution on histology images. This approach employs a deep neural network integrated with nuclei segmentation results to predict transcriptomic profiles at single-cell resolution from histology images. RedeHist takes histology images, ST data, and scRNA-seq references as inputs, then generates outputs consisting of single cells identified on the images along with their whole transcriptomic expression profiles, spatial coordinates, and annotations. RedeHist is a python package written in Python 3.9 and pytorch 1.12. It allows GPU to accelerate computational efficiency.
+RedeHist is an automatic tool for spatial transcriptomics (ST) prediction at single-cell resolution from histology images. This approach employs a deep neural network integrated with nuclei segmentation results to predict transcriptomic profiles at single-cell resolution from histology images. RedeHist takes histology images, ST data, and scRNA-seq references as inputs, then generates outputs consisting of single cells identified on the images along with their whole transcriptomic expression profiles, spatial coordinates, and annotations. RedeHist is a python package written in Python 3.9 and pytorch 1.12. It allows GPU to accelerate computational efficiency.
 
 
 ## Installation
